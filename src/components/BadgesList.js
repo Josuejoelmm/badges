@@ -3,7 +3,6 @@ import './BadgesList.css'
 
 export default class BadgesList extends Component {
     render() {
-      
         return (
             <ul className="list-unstyled">
                 {this.props.badges.map(badge => {
@@ -19,8 +18,8 @@ export default class BadgesList extends Component {
                                     <div>
                                         {badge.firstName} {badge.lastName}
                                     </div>
-                                    <div>
-                                        {badge.twitter}
+                                    <div style={{color: '#1DA1F2'}}>
+                                        @{badge.twitter}
                                     </div>
                                     <div>
                                         {badge.jobTitle}

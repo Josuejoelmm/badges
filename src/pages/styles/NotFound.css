@@ -1,0 +1,5 @@
+.not-found-container {
+    background: url('../../images/404-bg.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+}
