@@ -4,6 +4,8 @@ import configLogo from '../images/badge-header.svg'
 import './styles/Badges.css'
 import { Link } from 'react-router-dom'
 import api from '../api'
+import Loader from '../components/Loader'
+import PageError from '../components/PageError'
 
 class Badges extends Component {
     constructor(props) {
@@ -16,6 +18,10 @@ class Badges extends Component {
     }
     
     componentDidMount() {
+        // const fetch = async() => { await fetch('db.json').then(resp => resp.json()).then((res) => {
+        //     console.log(res)
+        // }) }
+        // console.log(fetch)
         this.fetchData()
     }
 
@@ -35,11 +41,11 @@ class Badges extends Component {
 
     render() {
         if (this.state.loading === true) {
-            return 'Loading...';
+            return <Loader />;
         }
 
         if (this.state.error) {
-            return `Error: ${this.state.error.message}`
+            return <PageError error={this.state.error.message} />
         }
 
         return (

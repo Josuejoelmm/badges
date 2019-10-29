@@ -1,8 +1,11 @@
 import React, { Fragment } from 'react'
-import header from '../images/badge-header.svg'
+import header from '../images/platziconf-logo.svg'
 import './styles/BadgeNew.css'
 import Badge from '../components/Badge'
 import BadgeForm from '../components/BadgeForm'
+import api from '../api'
+import Loader from '../components/Loader'
+import PageError from '../components/PageError'
 
 class BadgeNew extends React.Component {
     state = {
@@ -20,26 +23,39 @@ class BadgeNew extends React.Component {
     handleClick = e => {
         console.log('Button was clicked')
     }
-    handleSubmit = e => {
+    handleSubmit = async e => {
         e.preventDefault();
-        console.log('Form was submited');
-        console.log(this.state);
+        console.log('form enviadoooooo')
+        this.setState({ loading: true, error: null });
+        try {
+            await api.badges.create(this.state);
+            this.setState({ loading: false });
+        } catch (error) {
+            this.setState({ loading: false, error: error });
+        }
     }
     render() {
+        if (this.state.loading === true) {
+            return <Loader />
+        }
+
+        if (this.state.error) {
+            return <PageError error={this.state.error} />
+        }
         return (
             <Fragment>
                 <div className="BadgeNew__hero">
-                    <img className="img-fluid" src={header} alt="logo" />
+                    <img className=" BadgeNew__hero-image img-fluid" src={header} alt="logo" />
                 </div>
                 <div className="container">
                     <div className="row badge-card">
                         <div className="col-6 col-1">
                             <Badge 
-                                firstName={this.state.firstName}
-                                lastName={this.state.lastName}
-                                jobTitle={this.state.jobTitle}
-                                twitter={this.state.twitter}
-                                avatarUrl="https://lh3.googleusercontent.com/-mHUdgp2DzEY/XQE3n4bqheI/AAAAAAAADNg/4Uq-RTsaSmgA2Ky5KC7cAJQtBK1kI0LmQCEwYBhgL/w140-h140-p/2019-06-12.jpg"
+                                firstName={this.state.firstName || 'FIRST_NAME'}
+                                lastName={this.state.lastName || 'LAST_NAME'}
+                                jobTitle={this.state.jobTitle || 'YOUR_JOB'}
+                                twitter={this.state.twitter || 'TWITTER'}
+                                email={this.state.email}
                             />
                         </div>
                         <div className="col-6 col-2">
