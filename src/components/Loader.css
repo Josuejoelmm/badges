@@ -89,3 +89,7 @@
       opacity: 0.5;
     }
   }
+/* -----------------------------------------*/
+  .Badges__container > .loader-container {
+    position: relative;
+  }

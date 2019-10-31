@@ -2,11 +2,11 @@
   "badges": [
     {
       "id": "2de30c42-9deb-40fc-a41f-05e62b5939a7",
-      "firstName": "Freda",
-      "lastName": "Grady",
-      "email": "Leann_Berge@gmail.com",
+      "firstName": "Freda Frida",
+      "lastName": "Grady Khalo",
+      "email": "fredafrida@gmail.com",
       "jobTitle": "Legacy Brand Director",
-      "twitter": "FredaGrady22221-7573",
+      "twitter": "fredafrida",
       "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
     },
     {
@@ -20,9 +20,9 @@
     },
     {
       "id": "43a0a0df-9a0a-4a56-aa0c-2efc3a2b5897",
-      "firstName": "Reyna",
+      "firstName": "Reina",
       "lastName": "Gislason",
-      "email": "Roxanne47@yahoo.com",
+      "email": "rina@yahoo.com",
       "jobTitle": "Central Marketing Director",
       "twitter": "ReynaGislason11792",
       "avatarUrl": "https://www.gravatar.com/avatar/570f8b0138bcb82537d55ab7732c8c4f?d=identicon"
@@ -53,6 +53,14 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Joel",
+      "lastName": "Mendez",
+      "email": "joel.j.mendez.m@gmail.com",
+      "jobTitle": "mozo",
+      "twitter": "joeljm",
+      "id": "bsIr7Y-"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Badges from '../pages/Badges'
 import BadgeNew from '../pages/BadgeNew'
+import BadgeEdit from '../pages/BadgeEdit'
 import { BrowserRouter, Switch , Route } from 'react-router-dom'
 import Layout from './Layout'
 import NotFound from '../pages/NotFound'
@@ -12,6 +13,7 @@ function App () {
                 <Switch>
                     <Route exact path="/badges" component={Badges} />
                     <Route path="/badges/new" component={BadgeNew} />
+                    <Route path="/badges/:badgeId/edit" component={BadgeEdit} />
                     <Route component={NotFound} />
                 </Switch>
             </Layout>
