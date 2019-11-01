@@ -20,7 +20,10 @@ export default class BadgesList extends Component {
             <ul className="list-unstyled">
                 {this.props.badges.map(badge => {
                     return (
-                        <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}/edit`}>
+                        <Link 
+                            className="text-reset text-decoration-none" 
+                            to={`/badges/${badge.id}`}
+                        >
                             <BadgesListItem badge={badge} />
                         </Link>
                     )
