@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import confLogo from '../images/platziconf-logo.svg'
 import Badge from '../components/Badge'
 import { Link } from 'react-router-dom'
+import DeleteBadgeModal from '../components/DeleteBadgeModal'
 
 export default function BadgeDetails(props) {
         return (
@@ -39,7 +40,12 @@ export default function BadgeDetails(props) {
                                 </div>
 
                                 <div>
-                                    <button className="btn btn-danger">Delete</button>
+                                    <button onClick={props.onOpenModal} className="btn btn-danger">Delete</button>
+                                    <DeleteBadgeModal 
+                                        onClose={props.onCloseModal} 
+                                        isOpen={props.modalIsOpen}
+                                        onDeleteBadge={props.onDeleteBadge}
+                                    />
                                 </div>
                             </div>
                         </div>

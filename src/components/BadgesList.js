@@ -23,6 +23,7 @@ export default class BadgesList extends Component {
                         <Link 
                             className="text-reset text-decoration-none" 
                             to={`/badges/${badge.id}`}
+                            key={badge.id}
                         >
                             <BadgesListItem badge={badge} />
                         </Link>
