@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 export default class BadgeForm extends Component {
-    
-
     render() {
         return (
-            <div>
-                <h1>New Attendant</h1>
-
+            <Fragment>
                 <form onSubmit={this.props.handleSubmit}>
                     <div className="form-group">
                         <label>First Name</label>
@@ -35,9 +31,8 @@ export default class BadgeForm extends Component {
                     </div>
 
                     <button onClick={this.props.handleClick} className="btn btn-primary">Save</button>
-                </form>
-                
-            </div>
+                </form>            
+            </Fragment>
         )
     }
 }

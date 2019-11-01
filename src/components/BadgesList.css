@@ -3,8 +3,8 @@
 }
 
 .BadgesListItem {
-    background: rgba(0, 0, 0, 0.9);
-    color: #FFFFFF;
+    background: rgb(244, 244, 247);
+    color: #000000;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
     border-radius: 5px;
     padding: 1rem;
