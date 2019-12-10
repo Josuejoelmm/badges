@@ -5,7 +5,7 @@ function BadgesListItem(props) {
             <li className="BadgesListItem">
                 <div className="row">
                     <div className="col col-3">
-                        <img className="BadgesListItem__avatar" src={props.badge.avatarUrl} alt="avatar logo"/>
+                        <img className="BadgesListItem__avatar" src={`https://es.gravatar.com/avatar/${props.badge.hash}?d=identicon`} alt="avatar logo"/>
                     </div>
                     <div className="col col-9">
                         <div>

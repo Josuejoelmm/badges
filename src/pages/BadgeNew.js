@@ -6,6 +6,7 @@ import BadgeForm from '../components/BadgeForm'
 import api from '../api'
 import Loader from '../components/Loader'
 import PageError from '../components/PageError'
+import md5 from 'md5'
 
 class BadgeNew extends React.Component {
     state = {
@@ -16,14 +17,21 @@ class BadgeNew extends React.Component {
             lastName: '',
             email: '',
             jobTitle: '',
-            twitter: ''
+            twitter: '',
+            hash: ''
+        }
+    }
+    componentDidMount() {
+        if (this.state.loading === true) {
+            this.setState({ hash: md5(this.state.form.email) })
         }
     }
     handleChange = e => {
+        this.state.form.hash = md5(this.state.form.email);
         this.setState({
             form: {
                 ...this.state.form,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value,
             }
         });
     }
@@ -32,10 +40,10 @@ class BadgeNew extends React.Component {
     }
     handleSubmit = async e => {
         e.preventDefault();
-        console.log('form enviadoooooo')
+        console.log(this.state.form, 'prueba');
         this.setState({ loading: true, error: null });
         try {
-            await api.badges.create(this.state);
+            await api.badges.create(this.state.form);
             this.setState({ loading: false });
             this.props.history.push('/badges');
         } catch (error) {
@@ -64,6 +72,7 @@ class BadgeNew extends React.Component {
                                 jobTitle={this.state.form.jobTitle || 'YOUR_JOB'}
                                 twitter={this.state.form.twitter || 'TWITTER'}
                                 email={this.state.form.email}
+                                hash={this.state.form.hash}
                             />
                         </div>
                         <div className="col-6 col-2">

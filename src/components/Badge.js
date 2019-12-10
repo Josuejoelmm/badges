@@ -2,9 +2,12 @@ import React from 'react';
 import './Badge.css'
 import configLogo from '../images/badge-header.svg'
 import Gravatar from '../components/Gravatar'
+import md5 from 'md5'
 
 class Badge extends React.Component {
+    
     render() {
+        const avatarHash = md5(this.props.email);
         return(
             <div className="Badge">
                 <div className="Badge__header">
@@ -13,7 +16,7 @@ class Badge extends React.Component {
                 <div className="Badge__section-name">
                     <Gravatar 
                         className="Badge__avatar" 
-                        email={this.props.email} 
+                        hash={avatarHash} 
                     />
                     <h1>{this.props.firstName} <br/> 
                         {this.props.lastName}

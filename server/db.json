@@ -1,25 +1,13 @@
 {
   "badges": [
     {
-      "firstName": "Richard",
-      "lastName": "Kaufman López",
-      "email": "richardbkaufman@gmail.com",
-      "avatarUrl": "https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon",
-      "jobTitle": "Frontend Engineer @ Kickass Partners",
-      "twitter": "sparragus",
-      "id": "EYR2BVQ"
-    },
-    {
-      "loading": false,
-      "error": null,
-      "form": {
-        "firstName": "Josue",
-        "lastName": "Mendez",
-        "email": "josuejoelmm@gmail.com",
-        "jobTitle": "Frontend Dev",
-        "twitter": "josuejoel"
-      },
-      "id": "bVHVqRp"
+      "firstName": "Josue",
+      "lastName": "Mendez",
+      "email": "josuejoelmm2@gmail.com",
+      "jobTitle": "frontend dev",
+      "twitter": "josuejoelmm",
+      "hash": "55d7b884e107fe3708caad9b7b0f2379",
+      "id": 1
     }
   ]
 }
