@@ -8,6 +8,24 @@
       "twitter": "josuejoelmm",
       "hash": "55d7b884e107fe3708caad9b7b0f2379",
       "id": 1
+    },
+    {
+      "firstName": "Alisha",
+      "lastName": "Keys",
+      "email": "alishakeys@gmail.com",
+      "jobTitle": "Engineer",
+      "twitter": "alishatwitter",
+      "hash": "819c7a173665efcc9390a15e60d9f2ab",
+      "id": 2
+    },
+    {
+      "firstName": "Pedro",
+      "lastName": "Gonzalez",
+      "email": "",
+      "jobTitle": "Frontend Dev",
+      "twitter": "pedrogon07",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "id": 3
     }
   ]
 }

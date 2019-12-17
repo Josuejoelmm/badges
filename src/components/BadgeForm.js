@@ -7,12 +7,12 @@ export default class BadgeForm extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <div className="form-group">
                         <label>First Name</label>
-                        <input onChange={this.props.handleChange} className="form-control" name="firstName" type="text" value={this.props.formFirstName}/>
+                        <input onChange={this.props.handleChange} className="form-control" name="firstName" type="text" value={this.props.formFirstName} required/>
                     </div>
 
                     <div className="form-group">
                         <label>Last Name</label>
-                        <input onChange={this.props.handleChange} className="form-control" name="lastName" type="text" value={this.props.formLastName}/>
+                        <input onChange={this.props.handleChange} className="form-control" name="lastName" type="text" value={this.props.formLastName} required/>
                     </div>
 
                     <div className="form-group">
@@ -22,12 +22,12 @@ export default class BadgeForm extends Component {
 
                     <div className="form-group">
                         <label>Job Title</label>
-                        <input onChange={this.props.handleChange} className="form-control" name="jobTitle" type="text" value={this.props.formJobTitle}/>
+                        <input onChange={this.props.handleChange} className="form-control" name="jobTitle" type="text" value={this.props.formJobTitle} required/>
                     </div>
 
                     <div className="form-group">
                         <label>Twitter</label>
-                        <input onChange={this.props.handleChange} className="form-control" name="twitter" type="text" value={this.props.formTwitter}/>
+                        <input onChange={this.props.handleChange} className="form-control" name="twitter" type="text" value={this.props.formTwitter} required/>
                     </div>
 
                     <button onClick={this.props.handleClick} className="btn btn-primary">Save</button>
