@@ -10,18 +10,18 @@ export default function BadgeDetails(props) {
                 <div className="BadgeDetails__hero">
                     <div className="container">
                         <div className="row">
-                            <div className="col-6">
-                                <img src={confLogo} alt="Logo de la conferencia" />
+                            <div className="col-6 jm-center">
+                                <img className="logo-conference" src={confLogo} alt="Logo de la conferencia" />
                             </div>
-                            <div className="col-6 BadgeDetails__hero-attendant-name">
+                            <div className="col-6 BadgeDetails__hero-attendant-name jm-center">
                                 <h1>{props.badge.firstName} {props.badge.lastName}</h1>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="container">
+                <div className="container main-container">
                     <div className="row">
-                        <div className="col">
+                        <div className="col col-9">
                             <Badge 
                                 firstName={props.badge.firstName} 
                                 lastName={props.badge.lastName}
@@ -30,16 +30,16 @@ export default function BadgeDetails(props) {
                                 jobTitle={props.badge.jobTitle}
                             />
                         </div>
-                        <div className="col">
-                            <h3>Actions</h3>
+                        <div className="col col-3">
+                            <h3 className="jm-txt-center">Actions</h3>
                             <div>
-                                <div>
+                                <div className="jm-center">
                                     <Link className="btn btn-primary mb-4" to={`/badges/${props.badge.id}/edit`}>
                                         Edit
                                     </Link>
                                 </div>
 
-                                <div>
+                                <div className="jm-center">
                                     <button onClick={props.onOpenModal} className="btn btn-danger">Delete</button>
                                     <DeleteBadgeModal 
                                         onClose={props.onCloseModal} 

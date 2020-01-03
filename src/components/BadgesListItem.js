@@ -1,4 +1,5 @@
 import React from 'react'
+import './BadgesListItem.css'
 
 function BadgesListItem(props) {
         return(

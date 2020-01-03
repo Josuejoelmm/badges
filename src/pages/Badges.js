@@ -60,7 +60,7 @@ class Badges extends Component {
                         </div>
                     </div>
                 </div>            
-                <div className="Badges__container">
+                <div className="Badges__container badges-list">
                     <div className="Badges__buttons">
                         <Link to="/badges/new" className="btn btn-primary">
                             Add Badge
