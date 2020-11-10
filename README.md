@@ -10,9 +10,6 @@ This project uses the JSON Server, so you need to install it on your computer.
 Install JSON Server:
 `npm install -g json-server`
 
-Run the JSON Server on port 3004, with the `--port` flag (you can use any other than port 3000, since that will be the one used by React):
-`json-server --watch server/db.json --port 3004`
-
 Start the app:
 `npm start`
 
