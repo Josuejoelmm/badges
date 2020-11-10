@@ -11,7 +11,7 @@ Install JSON Server:
 `npm install -g json-server`
 
 Run the JSON Server on port 3004, with the `--port` flag (you can use any other than port 3000, since that will be the one used by React):
-`json-server --watch db.json --port 3004`
+`json-server --watch server/db.json --port 3004`
 
 Start the app:
 `npm start`
